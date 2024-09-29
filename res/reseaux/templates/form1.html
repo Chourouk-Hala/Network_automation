@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .btn {
+        background-color: #20b2aa;
+        color: white;
+        padding: 14px;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: none;
+    }
+    .cnt{
+        background-color: white;
+        border-radius: 20px;
+        border: 2px solid #20b2aa;
+    }
+    .c {
+        display: flex;
+        margin-left: 500px;
+        
+
+
+    }
+    .t {
+        color:  #20b2aa;
+    }
+</style>
+</head>
+<body>
+<h2 class="t">Configuration</h2>
+<div class="form-popup" id="myForm">
+<form action="/reseaux/reseaux/form1/RouterConf" method="POST" class="form-container">
+    {% csrf_token %}
+<h1 class="t">Router</h1>
+
+<label for="ip"><b>IP address 1</b></label>
+<input type="text" class="cnt" placeholder="Enter IP address" name="ip" required>
+
+<label for="mask"><b>Mask</b></label>
+<input type="text" class="cnt" placeholder="Enter Mask" name="mask" required>
+
+<label for="ip"><b>IP address 2</b></label>
+<input type="text" class="cnt" placeholder="Enter IP address" name="ip2" required>
+
+<label for="mask"><b>Mask</b></label>
+<input type="text" class="cnt" placeholder="Enter Mask" name="mask2" required>
+
+<label for="mask"><b>vlan1 id </b></label>
+<input type="text" class="cnt" placeholder="Enter vlan id" name="idv1" required>
+
+<label for="mask"><b>vlan2 id </b></label>
+<input type="text" class="cnt" placeholder="Enter vlan id" name="idv2" required>
+
+<br>
+<br>
+<br>
+<br>
+<div class="c">
+<button type="submit" class="btn">configure</button>
+<a class="btn" href="/reseaux/reseaux/home">Close</a>
+</div>
+</form>
+</div>
+</body>
+</html>

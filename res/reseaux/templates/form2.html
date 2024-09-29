@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .btn {
+        background-color: #20b2aa;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: none;
+    }
+    .cnt{
+        background-color: white;
+        border-radius: 20px;
+        border: 2px solid #20b2aa;
+    }
+    .c {
+        display: flex;
+        margin-left: 450px;
+        
+
+    }
+    .t {
+        color:  #20b2aa;
+    }
+</style>
+</head>
+<body>
+<h2 class="t">Configuration</h2>
+<div class="form-popup" id="myForm">
+<form action="/reseaux/reseaux/form2/SwitchConf" method="post" class="form-container">
+    {% csrf_token %}  
+<h1 class="t">Switch</h1>
+
+<label for="ip"><b>vlan1 name</b></label>
+<input type="text" class="cnt" placeholder="Enter vlan name" name="name1" required>
+
+<label for="mask"><b>vlan1 id </b></label>
+<input type="text" class="cnt" placeholder="Enter vlan id" name="id1" required>
+
+<label for="ip"><b>vlan2 name</b></label>
+<input type="text" class="cnt" placeholder="Enter vlan name" name="name2" required>
+
+<label for="mask"><b>vlan2 id</b></label>
+<input type="text" class="cnt" placeholder="Enter vlan id" name="id2" required>
+<br>
+<br>
+<br>
+<br>
+<div class="c">
+<button type="submit" class="btn">configure</button>
+<a class="btn" href="/reseaux/reseaux/home">Close</a>
+</div>
+</form>
+</div>
+</body>
+</html>
